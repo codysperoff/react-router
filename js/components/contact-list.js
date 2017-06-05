@@ -1,9 +1,27 @@
 import React from 'react';
-import Contact from  './contact';
+import Contact from  './contacts';
+
 
 export default function ContactList(props) {
-    const contacts = Object.keys(props.contacts).map((contactId, index) => {
-        const contact = props.contacts[contactId];
+    var contactsList ={
+        0: {
+            id: 0,
+            name: 'Sarah Hughes',
+            phoneNumber: '01234 567890'
+        },
+        1: {
+            id: 1,
+            name: 'Tim Taylor',
+            phoneNumber: '02345 678901'
+        },
+        2: {
+            id: 2,
+            name: 'Sam Smith',
+            phoneNumber: '03456 789012'
+        }
+    };
+    const contacts = Object.keys(contactsList).map((contactId, index) => {
+        const contact = contactsList[contactId];
         return (
             <li key={index}>
             <Contact id={contact.id} name={contact.name}
