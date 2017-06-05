@@ -4,7 +4,7 @@ export default function Contact(props) {
     return (
         <div>
         <strong>
-        {props.name}
+        {props.id} - {props.name}
         </strong>
         &nbsp;
         {props.phoneNumber}
